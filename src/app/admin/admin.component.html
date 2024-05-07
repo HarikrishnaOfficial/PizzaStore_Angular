@@ -1,0 +1,126 @@
+<app-admin-nav></app-admin-nav>
+
+<div *ngIf="menu">
+  <h1 style="text-align: start;">Hey Admin! Welcome to the Menu</h1>
+  
+  <div>
+    <h2>Pizza</h2>
+    <div class="add-item">
+      <!-- Button to add a new item for this category -->
+      <button (click)="addItem('pizza')">Add Pizza</button>
+    </div>
+    <div class="menu-items">
+      <div *ngFor="let pizza of menu.pizza">
+        <div class="menu-item">
+          <img [src]="pizza.imageURL" alt="{{ pizza.name }}">
+          <div class="details">
+            <div>
+              <h4>{{ pizza.name }}</h4>
+              <p>Price: {{ pizza.price | currency:'INR':true }}</p>
+            </div>
+            <div>
+              <button id="edit" (click)="editItem('pizza', pizza)">Edit</button>
+              <button id="delete" (click)="deleteItem('pizza', pizza.id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <h2>Sides</h2>
+    <div class="add-item">
+      <!-- Button to add a new item for this category -->
+      <button (click)="addItem('sides')">Add Side</button>
+    </div>
+    <div class="menu-items">
+      <div *ngFor="let side of menu.sides">
+        <div class="menu-item">
+          <img [src]="side.imageURL" alt="{{ side.name }}">
+          <div class="details">
+            <div>
+              <h4>{{ side.name }}</h4>
+              <p class="price">Price: {{ side.price | currency:'INR':true}}</p>
+            </div>
+            <div>
+              <button id="edit" (click)="editItem('sides', side)">Edit</button>
+              <button id="delete" (click)="deleteItem('sides', side.id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <h2>Beverages</h2>
+    <div class="add-item">
+      <!-- Button to add a new item for this category -->
+      <button (click)="addItem('beverages')">Add Beverage</button>
+    </div>
+    <div class="menu-items">
+      <div *ngFor="let beverage of menu.beverages">
+        <div class="menu-item">
+          <img [src]="beverage.imageURL" alt="{{ beverage.name }}">
+          <div class="details">
+            <div>
+              <h4>{{ beverage.name }}</h4>
+              <p>Price: {{ beverage.price | currency:'INR':true }}</p>
+            </div>
+            <div>
+              <button id="edit" (click)="editItem('beverages', beverage)">Edit</button>
+              <button id="delete" (click)="deleteItem('beverages', beverage.id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form for editing -->
+<div *ngIf="editingItem" class="popup">
+  <div class="popup-content">
+    <span class="close" (click)="editingItem = null">&times;</span>
+    <h2>Edit Item</h2>
+    <form (submit)="saveEdit()">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="editingItem.name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Price:</label>
+        <input type="number" [(ngModel)]="editingItem.price" name="price" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Image URL:</label>
+        <input type="text" [(ngModel)]="editingItem.imageURL" name="imageURL" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>
+
+<!-- Form for adding new item -->
+<div *ngIf="showAddFormFlag" class="popup">
+  <div class="popup-content">
+    <span class="close" (click)="cancelAddForm()">&times;</span>
+    <h2>Add New Item</h2>
+    <form (submit)="saveNewItem()">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="newItem.name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Price:</label>
+        <input type="number" [(ngModel)]="newItem.price" name="price" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Image URL:</label>
+        <input type="text" [(ngModel)]="newItem.imageURL" name="imageURL" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>

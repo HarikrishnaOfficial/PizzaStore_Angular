@@ -1,0 +1,43 @@
+/* revenue.component.css */
+
+.revenue-table {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #f8f9fa;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #c8ffd1;
+}
+
+tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+tbody td {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td:last-child {
+    border-right: none;
+}
+

@@ -1,0 +1,18 @@
+<div class="main">
+  <h1>Welcome to Pizza Store</h1>
+  <div>
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      <br>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      <br>
+      <p (click)="navigateToRegister()" class="registerText">New user? Click Here to Register</p>
+      <br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+</div>

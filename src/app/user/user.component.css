@@ -1,0 +1,87 @@
+/* Styles for the menu items container */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+  }
+  
+  /* Styles for individual menu items */
+  .menu-item {
+    width: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the image */
+  .menu-item img {
+    width: 250px;
+    height: 180px;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  /* Styles for the item details */
+  .details {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  
+  /* Styles for item name */
+  .details h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  /* Styles for item price */
+  .details p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: green;
+  }
+  h2{
+    text-align: center;
+    text-decoration:underline;
+    color: #4CAF50;
+    font-size: 30px;
+    margin-bottom: 3  0px;
+  }
+  .quantity{
+    color: rgba(0, 47, 47, 0.566) !important;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .menu-item {
+      width: calc(50% - 20px); /* Adjust as needed */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .menu-item {
+      width: 100%;
+    }
+  }
+  
+
+  

@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+
+<div class="container" *ngIf="cart">
+  <h1 class="title">Your Cart</h1>
+
+  <div class="items-container">
+    <table *ngIf="cart.items.length > 0" class="items-table">
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Item Quantity</th>
+          <th>Item Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cart.items">
+          <td>{{ item.name }}</td>
+          <!-- <td><button class="dec">-</button>{{ item.quantity }}<button class="dec">+</button></td> -->
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="total"><strong>Total:</strong> {{ cart.total.toFixed(2) | currency:'INR':true}}</p>
+
+  <div>
+    <div class="pcontainer">
+      <div class="title">
+        <h4>Select a <span style="color: green">Payment</span> method</h4>
+      </div>
+
+      <form>
+        <div class="category">
+          <div>
+            <label for="visa" class="visaMethod">
+              <div class="imgName">
+                <div class="imgContainer visa">
+                  <img src="https://i.ibb.co/vjQCN4y/Visa-Card.png" alt="">
+                </div>
+                <span class="name">VISA</span>
+              </div>
+              <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+          </div>
+          <div>
+            <label for="mastercard" class="mastercardMethod">
+              <div class="imgName">
+                <div class="imgContainer mastercard">
+                  <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
+                </div>
+                <span class="name">Mastercard</span>
+              </div>
+              <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+          </div>
+
+          <div>
+            <label for="paypal" class="paypalMethod">
+              <div class="imgName">
+                <div class="imgContainer paypal">
+                  <img src="https://i.ibb.co/KVF3mr1/paypal.png" alt="">
+                </div>
+                <span class="name">Paypal</span>
+              </div>
+              <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+          </div>
+
+          <div>
+            <label for="AMEX" class="amexMethod">
+              <div class="imgName">
+                <div class="imgContainer AMEX">
+                  <img src="https://i.ibb.co/wQnrX86/American-Express.jpg" alt="">
+                </div>
+                <span class="name">AMEX</span>
+              </div>
+              <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+          </div>
+
+        </div>
+      </form>
+    </div>
+    <div class="placeorder">
+      <button (click)="placeOrder(cart.id)">
+        Place Order
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div style="text-align: center; font-size:40px;" *ngIf="!cart" class="no-items">
+  <h4>No items in the cart</h4>
+</div>

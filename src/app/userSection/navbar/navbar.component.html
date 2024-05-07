@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="logo" (click)="navigateToUser()">Pizza Store</div>
+    <div class="nav-items">
+      <a routerLink="/cart">Cart</a>
+      <a routerLink="/orders">Orders</a>
+    </div>
+    <div class="logout">
+      <button (click)="logout()">Logout</button>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

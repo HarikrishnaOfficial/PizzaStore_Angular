@@ -1,0 +1,481 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "test"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "hari",
+      "password": "testpass"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "password": "user2"
+    },
+    {
+      "id": "3",
+      "username": "user3",
+      "password": "user3"
+    },
+    {
+      "id": "4",
+      "username": "user4",
+      "password": "user4"
+    },
+    {
+      "id": "5",
+      "username": "sanjay",
+      "password": "123"
+    },
+    {
+      "id": "6",
+      "username": "sai",
+      "password": "sai"
+    },
+    {
+      "id": "7",
+      "username": "Mahesh",
+      "password": "Mahesh@1432"
+    }
+  ],
+  "login": [],
+  "menu": {
+    "categories": {
+      "pizza": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "price": 10,
+          "category": "pizza",
+          "imageURL": "https://static01.nyt.com/images/2014/04/09/dining/09JPPIZZA2/09JPPIZZA2-superJumbo-v3.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "price": 15,
+          "category": "pizza",
+          "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAfKLrYNSfGqe0UwqHAbHLzHEdhii15EkPW_9UdisJp2CBan-1avgQ8xEyeoWGa2kOhk&usqp=CAU"
+        },
+        {
+          "id": 3,
+          "name": "Vegetarian",
+          "price": 11,
+          "category": "pizza",
+          "imageURL": "https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Nonveg",
+          "price": 18,
+          "category": "pizza",
+          "imageURL": "https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/HomeProductV1/3c601c37-f0fb-4413-8666-962dcf3da157_PIZ5148.jpg"
+        }
+      ],
+      "sides": [
+        {
+          "id": 5,
+          "name": "French Fries",
+          "price": 5,
+          "category": "sides",
+          "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7InXmvACBZnj75kq2N9yZoYh0ZZgSO7kjt79lyabpxg&s"
+        },
+        {
+          "id": 6,
+          "name": "Veggie",
+          "price": 5,
+          "category": "sides",
+          "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh5MeTJ8wuu2bewN6wYKwzmmsYW1F2W0BXrRJSMAep2g&s"
+        },
+        {
+          "id": 7,
+          "name": "Parmesan",
+          "price": 4,
+          "category": "sides",
+          "imageURL": "https://www.southernliving.com/thmb/lHfCFkqAtGDDzWG5ElRcvdA-xWo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SL_SEO_Batch_33_GarlicParmesanGreenBeans588-f98e09e471c44cbf9205dbbcef84ac01.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Garlic Bread",
+          "price": 5,
+          "imageURL": "https://www.thespruceeats.com/thmb/X_JGM04VusvkuGqTVan4QmBRqjI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-make-homemade-french-fries-2215971-hero-01-02f62a016f3e4aa4b41d0c27539885c3.jpg",
+          "category": "sides"
+        }
+      ],
+      "beverages": [
+        {
+          "id": 9,
+          "name": "Lemonade",
+          "price": 3,
+          "category": "beverages",
+          "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0DX6Y5A8F6B4NtYdzO49LzLvY1QMRkDGaqPxRXl84Q&s"
+        },
+        {
+          "id": 10,
+          "name": "Cola",
+          "price": 5,
+          "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH-cQiSZkV5_75ptjgcJ_dZ33YHyyLZBAAOBEYMfc0zQ&s",
+          "category": "beverages"
+        },
+        {
+          "id": 11,
+          "name": "Mango Passion",
+          "price": 3,
+          "imageURL": "https://www.thespruceeats.com/thmb/2gT0yOgYqVMLDn4Xh7wt2_e8Jrk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mango-passion-cocktail-3217025-hero-01-df042d4619d44d3e8d22992f3d72eb6c.jpg",
+          "category": "beverages"
+        },
+        {
+          "id": 12,
+          "name": "Pepsi",
+          "price": 5,
+          "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB7LA4O3rVZxr2t4_yhUKV1jWoZzOvvO6S9vh5PWPbVzBADqTzWV28TJdVxgSECHSYRxI&usqp=CAU",
+          "category": "beverages"
+        }
+      ]
+    }
+  },
+  "orders": [
+    {
+      "id": "4bb7",
+      "userId": "1",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        }
+      ],
+      "total": 10,
+      "status": "Canceled"
+    },
+    {
+      "id": "3a82",
+      "userId": "1",
+      "items": [
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        }
+      ],
+      "total": 15,
+      "status": "Delivered"
+    },
+    {
+      "id": "886a",
+      "userId": "3",
+      "items": [
+        {
+          "id": 3,
+          "name": "Vegetarian",
+          "quantity": 1,
+          "price": 11
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 12
+        },
+        {
+          "id": 9,
+          "name": "Cola",
+          "quantity": 1,
+          "price": 2
+        },
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        }
+      ],
+      "total": 35,
+      "status": "Canceled"
+    },
+    {
+      "id": "71d9",
+      "userId": "1",
+      "items": [
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "name": "Vegetarian",
+          "quantity": 1,
+          "price": 11
+        }
+      ],
+      "total": 26,
+      "status": "Canceled"
+    },
+    {
+      "id": "e9e8",
+      "userId": "1",
+      "items": [
+        {
+          "id": 7,
+          "name": "Parmesan",
+          "quantity": 1,
+          "price": 4
+        },
+        {
+          "id": 10,
+          "name": "Cola",
+          "quantity": 1,
+          "price": 2
+        }
+      ],
+      "total": 6,
+      "status": "Canceled"
+    },
+    {
+      "id": "8aba",
+      "userId": "2",
+      "items": [
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        }
+      ],
+      "total": 15,
+      "status": "Canceled"
+    },
+    {
+      "id": "6ba4",
+      "userId": "3",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "name": "Vegetarian",
+          "quantity": 1,
+          "price": 11
+        }
+      ],
+      "total": 36,
+      "status": "Delivered"
+    },
+    {
+      "id": "b962",
+      "userId": "3",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 7,
+          "name": "Parmesan",
+          "quantity": 1,
+          "price": 4
+        },
+        {
+          "id": 4,
+          "name": "Nonveg",
+          "quantity": 1,
+          "price": 18
+        }
+      ],
+      "total": 32,
+      "status": "Canceled"
+    },
+    {
+      "id": "4e80",
+      "userId": "1",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        }
+      ],
+      "total": 25,
+      "status": "Delivered"
+    },
+    {
+      "id": "f424",
+      "userId": "5",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 6,
+          "name": "Veggie",
+          "quantity": 1,
+          "price": 5
+        },
+        {
+          "id": 12,
+          "name": "Pepsi",
+          "quantity": 1,
+          "price": 2
+        }
+      ],
+      "total": 17,
+      "status": "Canceled"
+    },
+    {
+      "id": "c541",
+      "userId": "5",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        }
+      ],
+      "total": 25,
+      "status": "Delivered"
+    },
+    {
+      "id": "97a1",
+      "userId": "1",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        }
+      ],
+      "total": 10,
+      "status": "Delivered"
+    },
+    {
+      "id": "d338",
+      "userId": "6",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        }
+      ],
+      "total": 25,
+      "status": "Delivered"
+    },
+    {
+      "id": "b251",
+      "userId": "7",
+      "items": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "quantity": 1,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "quantity": 1,
+          "price": 15
+        }
+      ],
+      "total": 25,
+      "status": "Delivered"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1x12fukrp",
+      "userId": "3",
+      "items": [],
+      "total": 0
+    },
+    {
+      "id": "xsd539l4u",
+      "userId": "1",
+      "items": [],
+      "total": 0
+    },
+    {
+      "id": "anl7ernys",
+      "userId": "2",
+      "items": [],
+      "total": 0
+    },
+    {
+      "id": "prifnnh42",
+      "userId": "5",
+      "items": [],
+      "total": 0
+    },
+    {
+      "id": "y95ckovyy",
+      "userId": "6",
+      "items": [],
+      "total": 0
+    },
+    {
+      "id": "fvevtfw3b",
+      "userId": "7",
+      "items": [],
+      "total": 0
+    }
+  ],
+  "revenue": {
+    "January": 100,
+    "February": 100,
+    "March": 100,
+    "April": 472,
+    "May": 100,
+    "June": 100,
+    "July": 100,
+    "August": 100,
+    "September": 100,
+    "October": 100,
+    "November": 100,
+    "December": 100
+  }
+}

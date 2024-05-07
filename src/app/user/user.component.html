@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+
+
+<div *ngIf="menu">
+  <h1>Hey <span style="color: green;">{{userName}}!</span> Welcome to the Menu</h1>
+  
+  <div>
+    <h2>Pizza</h2>
+    <div class="menu-items">
+      <div *ngFor="let pizza of menu.pizza">
+        <div class="menu-item">
+          <img [src]="pizza.imageURL" alt="{{ pizza.name }}">
+          <div class="details">
+            <div>
+              <h4>{{ pizza.name }}</h4>
+              <p>Price: {{ pizza.price | currency:'INR':true }}</p>
+            </div>
+            <div>
+              <button (click)="addToCart(pizza)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <h2>Sides</h2>
+    <div class="menu-items">
+      <div *ngFor="let side of menu.sides">
+        <div class="menu-item">
+          <img [src]="side.imageURL" alt="{{ side.name }}">
+          <div class="details">
+            <div>
+              <h4>{{ side.name }}</h4>
+              <p class="price">Price: {{ side.price | currency:'INR':true}}</p>
+            </div>
+            <div>
+              <button (click)="addToCart(side)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <h2>Beverages</h2>
+    <div class="menu-items">
+      <div *ngFor="let beverage of menu.beverages">
+        <div class="menu-item">
+          <img [src]="beverage.imageURL" alt="{{ beverage.name }}">
+          <div class="details">
+            <div>
+              <h4>{{ beverage.name }}</h4>
+              <p>Price: {{ beverage.price | currency:'INR':true }}</p>
+            </div>
+            <div>
+              <button (click)="addToCart(beverage)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

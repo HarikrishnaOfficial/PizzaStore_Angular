@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="container" *ngIf="orders">
+  <h1 class="title">Your Orders</h1>
+
+  <div *ngFor="let order of orders" class="order-container">
+    <h4>Order Id: {{order.id}}</h4>
+    <div class="items-container">
+      <table *ngIf="order.items.length > 0" class="items-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Item Quantity</th>
+            <th>Item Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of order.items">
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="order">
+      <p class="total"><strong>Total:</strong> {{ order.total.toFixed(2) | currency:'INR':true}}</p>
+      <h3 class="status"><strong>Status:</strong> {{ order.status}}</h3>
+      <button (click)="cancelOrder(order.id)" [disabled]="order.status === 'Delivered'">
+        Cancel Order
+      </button>
+    </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <hr>
+      <br>
+    </div>
+  </div>
+
+</div>
+
